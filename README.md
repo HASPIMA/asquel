@@ -1,9 +1,9 @@
 # ASQUEL
 Mathematical programming language
 
---Un poco de historia (si no quieres aburrirte saltate esto)--
+>Un poco de historia (si no quieres aburrirte saltate esto)
 
-       A los 14 años di mi primer paso en la programación. Yo lo se, HTML y CSS no son lenguajes de programación. Pero
+   A los 14 años di mi primer paso en la programación. Yo lo se, HTML y CSS no son lenguajes de programación. Pero
 te introducen a conceptos como sintaxis, semantica, reglas de escritura estricta, etc. En aquellos tiempos los equipos
 móviles más comercializados eran los dos grandes competidores: LG Cookie y Samsung Star.  Éste último ganaba por mucho
 al competidor principalmente porque discretamente dejaban migas de pan al sendero de la personalización absoluta en su
