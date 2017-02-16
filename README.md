@@ -1,7 +1,7 @@
 # ASQUEL
 Mathematical programming language
 
->Un poco de historia (si no quieres aburrirte saltate esto)
+:Un poco de historia (si no quieres aburrirte saltate esto)
 
    A los 14 años di mi primer paso en la programación. Yo lo se, HTML y CSS no son lenguajes de programación. Pero
 te introducen a conceptos como sintaxis, semantica, reglas de escritura estricta, etc. En aquellos tiempos los equipos
