@@ -1,0 +1,50 @@
+Sintaxys:
+
+funciones
+Todas las funciones se declaran con la palabra clave "funcion", seguido de
+el nombre de la función, numero inicial, numero final y donde se guardaran
+los datos generados.
+
+	funcion <nombre> (<inicio>, <final>) = <variable>
+
+statements (no es por mamón, es que no se como se dice en español)
+La misma sintaxys de álgebra.
+
+	a = (((8^2)-(sqrt(898))/(21*x))^3
+	x = entrada($entero)
+	mostrar(a)
+
+
+
+Que vamos a hacer?:
+
+Asquel será sensitivo a mayúsculas, dependerá integramente de funciones. No
+será compilable, será interpretado. Voy a tratar de hacerlo lo más fácil de
+aprender que pueda, fácil de implementar y voy a hacer tantas bibliotecas
+como pueda. En mi carrera de ingeniería industrial tengo varias materias de
+matemáticas, Álgebra Superior, Cálculo I, Fisica I y Quimica I. Cada clase
+me enseñan nuevas ecuaciones, nuevas funciones, constantes, como despejar
+variables, gráficas, vectores, números complejos, diferenciales, integrales,
+esquemas y demás, quiero agregarlas todas como ejemplos para el paquete de
+distribución.
+El intérprete se encontrará disponible para Windows, Ubuntu, Fedora, OSX y
+Android. Trataré incluso de hacer una versión web minimizada. No quiero
+sacar dinero de esto, no lo voy a vender ni voy a cobrar por el intérprete.
+Quiero que esté disponible para la mayor cantidad de personas posibles,
+hacer puentes con los lenguajes más usados, Java, .NET, C, entre otros, de
+tal forma que se pueda incluir e interpretar código embebido.
+Es un proyecto creado desde cero, por eso va a haber ocasiones donde voy a
+necesitar ayuda de otras personas para decidir algunos aspectos de Asquel.
+
+
+Cómo vamos a empezar?:
+Decidí empezar a crear un intérprete en algún lenguaje que conzca bien o
+especializarme en alguno nuevo. Se programar en C, Python y .NET. Voy a
+investigar sobre algunas herramientas útiles para crear las partes que
+necesito para hacer el intérprete, el analizador de gramática, el
+convertidor a símbolos, el agrupador de semántica y las bilbiotecas de
+tiempo de ejecución necesarias para hacer los cálculos más habituales.
+
+
+Para cuando una versión estable?:
+Tal vez para junio de este mismo año termine una versión utilizable.
