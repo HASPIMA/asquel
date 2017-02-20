@@ -1,0 +1,24 @@
+-*- Text -*-
+Asquel: lengauje de programacion matematico
+Instrucciones para la correcta construcción e instalación de asquel.
+
+
+Pre-requisitos
+==============
+
+Para compilar necesitarás las siguientes herramientas:
+- Python
+- o tambien puede ser Python3
+
+
+Construyendo el código objeto
+=============================
+
+1. Abre el directorio /src
+
+3. Abre una terminal
+
+4. ejecuta "python import asquel.py"
+
+
+Puedes arrancar el interprete sin compilarlo, escribiendo en /src "python asquel.py".

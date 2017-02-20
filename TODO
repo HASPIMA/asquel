@@ -1,0 +1,5 @@
+asquel.py:
+	- Crear parser propio
+	- Crear biblioteca de funciones
+	- Crear excepciones de entrada
+	- Corrector de syntaxis
