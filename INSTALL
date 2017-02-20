@@ -18,7 +18,7 @@ Construyendo el código objeto
 
 3. Abre una terminal
 
-4. ejecuta "python import asquel.py"
+4. ejecuta "python -m py_compile asquel.py"
 
 
 Puedes arrancar el interprete sin compilarlo, escribiendo en /src "python asquel.py".
