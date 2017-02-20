@@ -1,0 +1,37 @@
+Wed Feb 15 13:54:34 2017  Alan Zatarain  <jarztv@outlook.com>
+	* Planeación inicial:
+	Diseño de la syntaxis.
+	Diferenciación de tipo de elemento (función y declaraación).
+
+Fri Feb 17 17:07:23 2017 Alan Zatarain <jarztv@outlook.com>
+	* asquel.py
+	Python seleccionado como lenguage en que el interprete va a ser escrito.
+	Esqueleto de la interface del interpete hecha (sin funciones).
+	Selecciona licencia BSD para proteger a asquel.
+
+Mon Feb 20 13:00:51 2017 Alan Zatarain <jarztv@outlook.com>
+	*AUTHORS
+	Creada lista de autores y contribuyentes.
+	Agregado Alan Zatarain a la lista.
+
+	*CHANGELOG
+	Creada bitacora de cambios.
+	Agregada memoria de cambios hasta la fecha.
+
+	*INSTALL
+	Instrucciones de instalacion de version en pruebas.
+
+	*LICENSE
+	Cambio de la licencia BSD por una propia para dar mayor libertad a desarrolladores interesados en asquel.
+
+	*LINKS
+	Subido nuevo documento con enlaces utiles.
+
+	*README.md
+	Descripcion del repositorio completa.
+
+	*TODO
+	Creada lista de cosas por agregar a futuros realeases.
+
+	*asquel.py
+	Syntaxis nueva, el interprete ya resuelve operaciones sin incognita

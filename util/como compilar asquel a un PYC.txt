@@ -1,0 +1,5 @@
+Abre el directorio /src y ejecuta esto:
+
+	python -m py_compile asquel.py
+
+eso es todo ;)

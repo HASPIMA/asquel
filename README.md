@@ -1,41 +1,113 @@
-# ASQUEL
-Mathematical programming language
+# [Asquel](http://asquel.hol.es/)
+##### Mathematical programming language
 
-:Un poco de historia (si no quieres aburrirte saltate esto)
+[![Selenium Test Status](https://saucelabs.com/browser-matrix/bootstrap.svg)](http://www.asquel.hol.es/tests) [![Build Status](https://img.shields.io/travis/twbs/bootstrap/v4-dev.svg)](http://www.asquel.hol.es/build-status)
 
-   A los 14 años di mi primer paso en la programación. Yo lo se, HTML y CSS no son lenguajes de programación. Pero
-te introducen a conceptos como sintaxis, semantica, reglas de escritura estricta, etc. En aquellos tiempos los equipos
-móviles más comercializados eran los dos grandes competidores: LG Cookie y Samsung Star.  Éste último ganaba por mucho
-al competidor principalmente porque discretamente dejaban migas de pan al sendero de la personalización absoluta en su
-nivel más profundo: Firmware, que alguien con el conocimiento exacto del hardware logró hacer que ese teléfono tuviera
-funciones adicionales a las que lo acompañaban cuando lo comprabas.  Una de las más buscadas por los usuarios del Star
-era la posibilidad de instalar widgets de escritorio,  que no eran más que pequeñas aplicaciones en HTML, CSS y JS que
-daban la ilusión de tener un entorno de escritorio como el ofrecido por Windows pero en la palma de tu mano.
-       Yo empecé a distribuir los widgets, luego empecé a examinarlos, viendo que para tal ocual elemento se usaba una
-etiqueta y otra diferente para otro tipo de elemento, los estilos en CSS que cambiaban fuentes y colores, el JS que no
-dejaba de inquietarme por su complejidad, pero solo con verlo y leerlo me daba unna idea de que significaban todas las
-palabras, los parentesis y demás, todo en mi bloc de notas sin ninguna clase de marcador de sintaxis. Creanlo o no, no
-me importa, pero aprendí esos tres lenguajes yo solo sin cursos, solo viendo el código. Después me aventuré y empecé a
-modificarlos, para ponerles nuevas funciones o cambiarles el estilo,  tambien reparaba los errores que traian o que de
-alguna manera pudieran hacer mejor su trabajo. Finalmente pasó, decidí crear mi primer widget desde cero. Tardé tres o
-cuatro días para hacerlo de principio a fin,  desde el icono hasta el JS, un lanzador de sitios populares con el estio
-del menú de aplicaciones nativo. Luego de ese vinieron más, cada vez más complejos y con mejores funciones. Un atajo a
-la cámara, a facebook, a twitter, a cada red social que se me ocurriera, luego un buscador (como el que luego se haría
-tan popular en Android), calculadora, calendario, etc.
-       Un día investigué si había cursos de HTML, CSS y JS en Google, y si los había, descargué tanto como pude.   Ahí
-hubo un boom y se me ocurrieron nuevos widgets,  tantas  funciones  que  no conocía, elementos de HTML que nunca había
-probado. Pero llegó el auge de Android y los usuarios empezaron a cambiar sus Star por Galaxy. Los desarrolladores  de
-widgets se migraron a Android, pero yo no sabía nada de eso. Aprendí lo que aprendí porque HTML,  CSS y JS no eran tan
-complejos (al menos en ese punto, ya luego conocí funciones avanzadas y eso), pero el lenguaje de programación Java me
-abrumó. No entendía nada. Todo era complejo, muchos términos por aprender, una sintaxis compleja a más no poder...
-       Probé con otros lenguajes y me topé con C,  mi  salvación para aprender a programar, era muy fácil de aprender.
-Luego llegó PHP, VB, C# y finalmente el tan ansiado Java. Pasó mucho para que yo pudiera aprender. En esos momentos mi
-gran idea fue diseñar un nuevo lenguaje de programación, que fuera sencillo, fácil de aprender y que se  pudiera  usar
-en cualquier platadorma. Entonces empecé a diseñar ASQUEL.
+Asquel is a new programming language deigned by the mexican Industrial Engineering student [Alan Ramirez Zatarain](http://zatarain.co.nf), to be easy to understand and use, and with a mathematical syntax, to solve problems of career clases.
+
+The labs that work on Asquel are named "Asquel holes" and you can consult a list of them in <http://asquel.hol.es>!
+
+## Table of contents
+
+- [Quick start](#quick-start)
+- [Bugs and feature requests](#bugs-and-feature-requests)
+- [Documentation](#documentation)
+- [Contributing](#contributing)
+- [Community](#community)
+- [Versioning](#versioning)
+- [Holes](#holes)
+- [Copyright and license](#copyright-and-license)
+
+## Quick start
+
+In order to download binary releases of asquel you can do it from the [asquel holes' official latest release](http://asquel.hol.es/latest.zip) direct download.
+
+To get the sources you can:
+
+- Clone this repo: `git clone https://github.com/SoyZatarain/asquel.git`
+- Download the [compressed archive](http://asquel.hol.es/latest-src.tar.gz).
+
+To learn the syntax you can read the reference guide included in both archives. The interpreter is written in Python, so it does not need to be installed, you just need to run a terminal in the folder in wich the interpreter is located and do `python asquel.pyc`
+
+### What is asquel conformed of?
+
+This diagram represents the main idea for the interpeter and what parts of it i have already written:
+
+```
+Asquel
+├── Parser
+│   ├── Lexical analisis routine
+│   ├── Trim expresion into the minimum posible unit
+│   ├── Realize the operations in priority system
+│   └── Send result to output
+└── Interface
+    ├── Read expresion
+    └── Show result
+```
+
+We will have to develop our own parser and functions library to make asquel independent of python.
 
 
-No se definir si ASQUEL es procedimental, tipado y bla, bla, bla.  Sólo  diré que es un lenguaje orientado a funciones
-e inspirado en las matemáticas comúnes y corrientes de toda la vida. No tiene más secreto y su única función es resol-
-ver ecuaciones y demás problemas matemáticos.
+## Bugs and feature requests
 
+Do you have a great idea and you want it to be part of asquel? First you should read if someone else already had the same idea as seen in our TODO file. If you had an original idea and you already have the code, you can commit your changes into a new branch. If your idea is not in our plans yet, [please submit it to our discuss forum](https://asquelito.tumblr.com/).
+
+
+## Documentation
+
+Every single release of asquel has and will always have its manual, reference guide and examples in the distribution package, so it will be in every version you get.
+
+### I only want docs, not the package
+
+You can get them in the [asquel holes library](http://www.asquel.hol.es/docs/).
+
+
+
+## Contributing
+
+There are many ways to contribute to our project for example:
+
+- Donation
+- Suggesting ideas
+- Asking for new features
+- Fixing bugs
+- Porting asquel to other plattforms
+- Putting your code in asquel
+- Create new branches for new implementations of this language
+
+You can get more information in our [discussion forum](https://asquelito.tumblr.com/) or in the [official home of asquel](http://www.asquel.hol.es/).
+
+
+
+## Community
+
+Get updates on asquel's development
+
+- Join the [official discussion forum](https://asquelito.tumblr.com/).
+- Read the [Asquel holes blog](http://www.asquel.hol.es/blog).
+- Follow Alan Zatarain on his [facebook page](https://www.facebook.com/SoyZatarain/).
+
+
+
+## Versioning
+
+I will thank you a lot if you find Asquel useful to your own project, if you want to implement some new feature that helps you to the interpreter, trust me, that feature will help to much more people with your same curiousity. If you add your code to Asquel and you feel it is time to get appart of the main developement to envolve by your own, feel free to create your own version of Asquel.
+
+If you can make an upgrade to the code or to some specific function or routine, you can do it, and let me know if you want me to release an improved version with your upgrade.
+
+
+## Holes
+
+**UACJ**
+
+If you are a student of Universidad Autónoma de Ciudad Juárez, of any career or intitute, you can be part of the physic core developement team just sending me a message with your intention and i will send you the developement and discussion sessions schedule, so you can asist to our gatherings.
+
+**Juarez local asquel hole**
+
+This is more a plan of extension than a real asquel hole. No matter what university you are in, even if you are not at any university. Everyone can join the local asquel hole of Juarez. If you want this project to go on, contact me on my [facebook page](https://www.facebook.com/SoyZatarain/), and we will make an appointment.
+
+
+## Copyright and license
+
+Asquel documentation and object and source code copyright 2017 [Alan Ramirez Zatarain](http://zatarain.co.nf). Code released under [our own license](http://asquel.hol.es/LICENSE).
 

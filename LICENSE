@@ -1,29 +1,29 @@
-BSD 3-Clause License
+COPYRIGHT ©2017 JESUS ALAN RAMIREZ ZATARAIN
+CONTRATO DE LICENCIA PARA EL USUARIO FINAL
+REVISAR ACTUALIZACIONES EN http://asquel.hol.es/LICENSE
 
-Copyright (c) 2017, Jesus Alan Ramirez Zatarain
-All rights reserved.
+EL PRESENTE CONTRATO DE LICENCIA DE USUARIO FINAL (EN ADELANTE LA "LICENCIA") ES UN CONTRATO LEGAL Y VINCULANTE ENTRE JESUS ALAN RAMIREZ ZATARAIN (EN ADELANTE EL "AUTOR") Y USTED, Y EN CASO NECESARIO, LA COMPAÑÍA O LA ENTIDAD LEGAL A LA QUE REPRESENTE (EN ADELANTE REFERIDOS CONJUNTAMENTE COMO "USTED" Y "SU"), EN RELACIÓN CON EL SOFTWARE PROTEGIDO BAJO LA PRESENTE LICENCIA, INCLUIDO CUALQUIER MANUAL O MATERIAL DE NATURALEZA SIMILAR FACILITADO POR EL AUTOR COMO PARTE, O RELACIONADO CON, DICHO SOFTWARE EN SU FORMA DE CÓDIGO OBJETO O CÓDIGO FUENTE (EN ADELANTE REFERIDOS CONJUNTAMENTE COMO EL "SOFTWARE"), PARA FACILITARLE A USTED EL DERECHO DE USO Y DISTRIBUCIÓN LIBRE DEL SOFTWARE.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
+A PARTIR DEL MOMENTO EN QUE DESCARGUE, OBTENGA, SOLICITE, USE O DISTRIBUYA EL SOFTWARE, RECONOCE QUE HA ENTENDIDO Y SE COMPROMETE A CUMPLIR LAS CONDICIONES CONTENIDAS EN LA PRESENTE LICENCIA.  EN CASO DE QUE NO DESEE COMPROMETERSE, NO DEBERÁ DESCARGAR, OBTENER, SOLICITAR, USAR NI DISTRIBUIR EL SOFTWARE.
 
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
+1.	CONCESIÓN DE LA LICENCIA Y LIMITACIONES.
 
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
+1.1	Concesión de la licencia. El autor le otorga por el presente una licencia no exclusiva que le autoriza a utilizar tantas copias del software como se desee para su uso personal, no comercial, académico y ocio en cualquier número de computadores u otro dispositivo electrónico compatible. Podrá redistribuir el software a un tercero junto con, y en virtud de, sus derechos de acuerdo con la presente licencia, siempre y cuando se refieran los respectivos créditos al autor y su sitio web (ver apartado 9). La persona a la que se le haya redistribuido el software deberá recibir una copia de esta licencia, la cual será vinculante.
 
-* Neither the name of the copyright holder nor the names of its
-  contributors may be used to endorse or promote products derived from
-  this software without specific prior written permission.
+1.2	Limitaciones. Excepto en aquellos casos en que la legislación aplicable lo permita, usted no podrá: (a) alquilar, arrendar, vender la licencia a terceros o bien darle cualquier otro tipo de uso en el que se cobre por utilizarlo; (b) utilizar el software para violar los derechos de autor u otros derechos de propiedad intelectual del autor o de otros en cualquier otra forma; (c) modificar o eliminar los avisos de derechos de autor y otros derechos de propiedad en el software o dentro del mismo.
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+2.	FINALIZACIÓN. La presente licencia será efectiva hasta que usted desee terminar con el vínculo establecido al ceder la presente licencia. Podrá finalizar esta licencia en el momento que desee, simplemente desinstalando el software y destruyendo todas las copias del mismo de que disponga o tenga en su poder.  El autor podrá finalizar de inmediato esta licencia mediante notificación en caso de que incumpla cualquiera de los términos o condiciones. Una vez finalizada esta licencia, se compromete a desinstalar de forma inmediata el software, así como a destruir cualquier copia del mismo que disponga o tenga en su poder.
+
+3.	PROPIEDAD DEL SOFTWARE. El software es material protegido con derechos de autor de Jesús Alan Ramírez Zatarain y/o de sus otorgantes de licencia, y está supeditado al amparo de los derechos de autor de acuerdo con los tratados internacionales sobre derechos de autor, así como otras leyes y tratados sobre propiedad intelectual. El autor y/o sus otorgantes de licencia acumulan todos los derechos, títulos e intereses sobre el software (y las copias del mismo) y se reservan específicamente todos los derechos que no sea hayan concedido expresamente bajo esta licencia.  
+
+4.	GARANTÍAS LIMITADAS. EN EL MOMENTO EN EL QUE USTED DESCARGUE, UTILIZE O DE ALGUNA OTRA MANERA OBTENGA Y DISPONGA DEL SOFTWARE ACEPTA QUE ENTIENDE Y SE COMPROMETE A CUMPLIR CON LAS CONDICIONES CONTENIDAS EN LA PRESENTE LICENCIA. EL AUTOR LE GARANTIZA A USTED QUE EL SOFTWARE NO CONTIENE NINGÚN DEFECTO SIGNIFICATIVO EN EL MATERIAL NI EN LA CONFECCIÓN DEL SOFTWARE Y QUE SE APEGA A LA DESCRIPCIÓN Y PROPÓSITO GENERAL DEL SOFTWARE DURANTE UN PERIODO DE SEIS (6) MESES A CONTAR A PARTIR DE LA FECHA DE LA VINCULACIÓN DE LA LICENCIA ENTRE EL AUTOR Y USTED (EN ADELANTE EL "PERIODO DE GARANTÍA").  ESTA GARANTÍA LIMITADA QUEDARA INVALIDADA EN CASO DE QUE EL SOFTWARE SE HAYA UTILIZADO INDEBIDAMENTE, SE HAYA DAÑADO O SI HUBIERA INCUMPLIDO CUALQUIERA DE LAS DISPOSICIONES DE ESTA LICENCIA. POR EL PRESENTE, EN LA MEDIDA DE LO PERMITIDO POR LA LEY APLICABLE, RENUNCIA EXPRESAMENTE A TODAS LAS DEMÁS GARANTÍAS, YA SEAN EXPRESAS O IMPLÍCITAS, INCLUIDAS, AUNQUE NO DE MANERA LIMITADA, AQUELLAS GARANTÍAS DE COMERCIABILIDAD, DE APTITUD PARA UN FIN CONCRETO, DE TÍTULO, Y DE NO INCUMPLIMIENTO, O BIEN GARANTÍAS QUE VELEN PORQUE EL SOFTWARE NO CONTENGA NINGÚN FALLO, NI VIRUS Y QUE SEA SEGURO.
+
+5.	LIMITACIÓN DE LA RESPONSABILIDAD. EN NINGÚN CASO PODRÁ RESPONSABILIZAR AL AUTOR FRENTE A USTED POR DAÑOS DIRECTOS, PÉRDIDAS Y FUNDAMENTOS DE DEMANDA QUE PUDIERAN SURGIR O RELACIONADOS CON ESTA LICENCIA Y/O EL USO DEL SOFTWARE.  EN NINGÚN CASO EL AUTOR SERÁ RESPONSABLES DE LOS DAÑOS INDIRECTOS, ESPECIALES, INCIDENTALES, CONSECUENTES O DE CUALQUIER OTRA NATURALEZA (INCLUIDOS, SIN LIMITACIÓN, DAÑOS RELACIONADOS CON PÉRDIDA DE BENEFICIOS, PÉRDIDA DE DATOS, PRIVACIDAD, NEGLIGENCIA U OTROS DEBERES DE DILIGENCIA) INCLUSO SI EL AUTOR HUBIERA SIDO ADVERTIDO DE LA POSIBILIDAD DE DICHOS DAÑOS. 
+
+6.	FUNDAMENTO DEL PACTO; EXCLUSIONES. Las renuncias de garantía y limitaciones de responsabilidad descritas anteriormente son elementos fundamentales de la base de este contrato entre usted y el autor.  En virtud del presente documento entiende y acepta que el autor no podría económica ni razonablemente proporcionarle este software sin estas limitaciones.
+
+7.	INDEMNIZACIÓN.  Se compromete a indemnizar, defender y proteger al autor, incluidos sus respectivos empleados, directivos, directores y personal frente a cualquier reclamación, pérdida, responsabilidad, incluidos los honorarios de los abogados, en que pudiera incurrirse con motivo de esta licencia y/o por el uso o uso indebido del software. 
+
+8.	MISCELÁNEO.  Se compromete a satisfacer todas las leyes extranjeras y leyes de los Estados Unidos Mexicanos relativas al uso del software.  El presente documento constituye un acuerdo entre usted y el autor en lo que concierne a la materia en cuestión y sustituye cualquier representación, contrato, acuerdo o comunicación anterior, ya sea escrita u oral.  La presente licencia no podrá modificarse excepto por escrito, con la firma de ambas partes. En caso de que un tribunal de jurisdicción competente declarase nula o no ejecutable alguna de las disposiciones de esta licencia, dicha disposición será interpretada, deducida o reformada en la medida en que sea razonablemente necesario para conseguir que sea válida, ejecutable y en concordancia con el propósito original de la disposición, y dicha invalidez y no ejecutabilidad no afectará ninguna de las demás disposiciones de esta licencia. 
+
+9.	NOTIFICACIONES; DATOS DE CONTACTO DEL AUTOR.  Jesús Alan Ramírez Zatarain, con residencia en Heroica Ciudad Juárez, Chihuahua, México (o en la dirección actualizada que figure en http://zatarain.co.nf/), pone a su disposición el software.
