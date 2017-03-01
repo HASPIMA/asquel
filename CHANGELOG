@@ -1,37 +1,63 @@
-Wed Feb 15 13:54:34 2017  Alan Zatarain  <jarztv@outlook.com>
-	* Planeación inicial:
-	Diseño de la syntaxis.
-	Diferenciación de tipo de elemento (función y declaraación).
+Wed Mar 01 10:13:27 2017 Alan Zatarain <jarztv@outlook.com>
+	*xoloitzcuintle.py
+	- Funciones ya no depnden diectamente de Python como lenguaje
+	- Funciones trigonometricas independientes de Python
+	- Funcion para limpiar la pantalla
 
-Fri Feb 17 17:07:23 2017 Alan Zatarain <jarztv@outlook.com>
-	* asquel.py
-	Python seleccionado como lenguage en que el interprete va a ser escrito.
-	Esqueleto de la interface del interpete hecha (sin funciones).
-	Selecciona licencia BSD para proteger a asquel.
+	*asquel.py
+	- Estilizacion con colores en el texto para hacerlo mas llamativo
+	- Limpia la pantalla antes de iniciar.
+
+Thu Feb 23 11:01:45 2017 Alan Zatarain <jarztv@outlook.com>
+	*xoloitzcuintle.py
+	- Creada nuestra propia biblioteca de funciones :D pero dependiente de python.
+	- Agregadas funciones trigonometricas (aun dependientes de python).
+	- Agregadas funciones para descomponer vectores en X y Y.
+
+	*asquel.py
+	- Simplificacion y limpieza del codigo
+
+Tue Feb 21 14:15:37 2017 Alan Zatarain <jarztv@outlook.com>
+	*asquel.py
+	- Agregada excepcion en caso de que la expresion sea ingresada de manera erronea.
+	- Capacidad de diferenciar entre Python 2.x y 3.x sin modificar su funcion.
+	- Funciones de depuracion agregadas.
+	- Division de funciones de denotacion y resolucion en la clase Parser.
 
 Mon Feb 20 13:00:51 2017 Alan Zatarain <jarztv@outlook.com>
 	*AUTHORS
-	Creada lista de autores y contribuyentes.
-	Agregado Alan Zatarain a la lista.
+	- Creada lista de autores y contribuyentes.
+	- Agregado Alan Zatarain a la lista.
 
 	*CHANGELOG
-	Creada bitacora de cambios.
-	Agregada memoria de cambios hasta la fecha.
+	- Creada bitacora de cambios.
+	- Agregada memoria de cambios hasta la fecha.
 
 	*INSTALL
-	Instrucciones de instalacion de version en pruebas.
+	- Instrucciones de instalacion de version en pruebas.
 
 	*LICENSE
-	Cambio de la licencia BSD por una propia para dar mayor libertad a desarrolladores interesados en asquel.
+	- Cambio de la licencia BSD por una propia para dar mayor libertad a desarrolladores interesados en asquel.
 
 	*LINKS
-	Subido nuevo documento con enlaces utiles.
+	- Subido nuevo documento con enlaces utiles.
 
 	*README.md
-	Descripcion del repositorio completa.
+	- Descripcion del repositorio completa.
 
 	*TODO
-	Creada lista de cosas por agregar a futuros realeases.
+	- Creada lista de cosas por agregar a futuros realeases.
 
 	*asquel.py
-	Syntaxis nueva, el interprete ya resuelve operaciones sin incognita
+	- Syntaxis nueva, el interprete ya resuelve operaciones sin incognita.
+
+Fri Feb 17 17:07:23 2017 Alan Zatarain <jarztv@outlook.com>
+	* asquel.py
+	- Python seleccionado como lenguage en que el interprete va a ser escrito.
+	- Esqueleto de la interface del interpete hecha (sin funciones).
+	- Selecciona licencia BSD para proteger a asquel.
+
+Wed Feb 15 13:54:34 2017  Alan Zatarain  <jarztv@outlook.com>
+	* Planeación inicial:
+	- Diseño de la syntaxis.
+	- Diferenciación de tipo de elemento (función y declaraación).

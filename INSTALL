@@ -15,9 +15,7 @@ Construyendo el código objeto
 =============================
 
 1. Abre el directorio /src
-
 3. Abre una terminal
-
 4. ejecuta "python -m py_compile asquel.py"
 
 

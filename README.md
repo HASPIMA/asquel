@@ -1,5 +1,5 @@
-# [Asquel](http://asquel.hol.es/)
-##### Mathematical programming language
+# [Asquel](http://asquel.hol.es/) 0.0.0.0d
+##### This is a planning version, candidate to be our first release.
 
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/bootstrap.svg)](http://www.asquel.hol.es/tests) [![Build Status](https://img.shields.io/travis/twbs/bootstrap/v4-dev.svg)](http://www.asquel.hol.es/build-status)
 
@@ -31,18 +31,18 @@ To learn the syntax you can read the reference guide included in both archives. 
 
 ### What is asquel conformed of?
 
-This diagram represents the main idea for the interpeter and what parts of it i have already written:
+Diagram of the components of asquel:
 
 ```
 Asquel
-├── Parser
-│   ├── Lexical analisis routine
-│   ├── Trim expresion into the minimum posible unit
-│   ├── Realize the operations in priority system
+├── Interpreter
+│   ├── Clean screen
+│   ├── Read expressions
+│   ├── Send precompiled expression to parser
 │   └── Send result to output
-└── Interface
-    ├── Read expresion
-    └── Show result
+└── Functions library
+    ├── Core function for the interpreter
+    └── Detect Python or Python3 interpreter
 ```
 
 We will have to develop our own parser and functions library to make asquel independent of python.
