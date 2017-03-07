@@ -1,25 +1,32 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-import parser
+
+import os
 from xoloitzcuintle import *
 
 clear()
 derechos()
 
 class Parsero(object):
-    PROMPT = chr(27)+"[1;32m"+"Asquelito$ "+chr(27)+"[0;37m"
-    ALERTA = "Error: La expresión está mal denotada.\n"
+    if os.name == "posix":
+        PROMPT = chr(27)+"[1;32m"+"Asquelito$ "+chr(27)+"[0;37m"
+        ALERTA = chr(27)+"[0;91m"+"Error: La expresión está mal denotada."+chr(27)+"[0;37m"+"\n"
+    else:
+        PROMPT = "Asquelito:> "
+        ALERTA = "Error: La expresión está mal denotada.\n"
 
     def asquelito(self):
         while True:
             try:
                 resultado = evaluar(self.PROMPT)
-                print(chr(27)+"[1;37m""{}\n".format(resultado)+chr(27)+"[0;37m")
+                if os.name == "posix":
+                    print(chr(27)+"[1;37m""{}\n".format(resultado)+chr(27)+"[0;37m")
+                else:
+                    print("{}\n".format(resultado))
             except EOFError:
-                print('')
                 break
             except:
-                print(chr(27)+"[0;91m"+self.ALERTA+chr(27)+"[0;37m")
+                print(self.ALERTA)
 
 if __name__ == "__main__":
     Parsero().asquelito()
