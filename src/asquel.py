@@ -12,7 +12,7 @@ class Parsero(object):
         PROMPT = chr(27)+"[1;32m"+"Asquelito$ "+chr(27)+"[0;37m"
         ALERTA = chr(27)+"[0;91m"+"Error: La expresión está mal denotada."+chr(27)+"[0;37m"+"\n"
     else:
-        PROMPT = "Asquelito:> "
+        PROMPT = "Asquelito$ "
         ALERTA = "Error: La expresión está mal denotada.\n"
 
     def asquelito(self):
