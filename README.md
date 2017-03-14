@@ -1,11 +1,11 @@
-# [Asquel](http://asquel.hol.es/) 0.0.0.0e
+# [Asquel](http://asquelito.tumblr.com/) 0.0.0.0e
 ##### I just need to add letters to the parser to make a release.
 
 [![Selenium Test Status](https://saucelabs.com/browser-matrix/bootstrap.svg)](http://www.asquel.hol.es/tests) [![Build Status](https://img.shields.io/travis/twbs/bootstrap/v4-dev.svg)](http://www.asquel.hol.es/build-status)
 
 Asquel is a new programming language deigned by the mexican Industrial Engineering student [Alan Ramirez Zatarain](http://zatarain.co.nf), to be easy to understand and use, and with a mathematical syntax, to solve problems of career clases.
 
-The labs that work on Asquel are named "Asquel holes" and you can consult a list of them in <http://asquel.hol.es>!
+The labs that work on Asquel are named "Asquel holes" and you can consult a list of them in <http://asquelito.tumblr.com>!
 
 ## Table of contents
 
