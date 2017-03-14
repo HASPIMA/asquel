@@ -1,17 +1,21 @@
 Funciones estandarizadas:
 =========================
 
-suelo(x)		Menor numero entero inmediato, menor o igual a x.
-techo(x)		Mayor numero entero inmediato, mayor o igual a x.
-cpsg(x, y)		Copia el signo de y a x.
-fact(x)			Factorial de un numero (fact(5) = 1*2*3*4*5 = 120).
-seno(x)			Identidad trigonometrica seno.
-coseno(x)		Identidad trigonometrica coseno.
-tangente(x)		Identidad trigonometrica tangente.
-descx(x, y)		Descomponer en el eje X vector de x fuerza a y grados del eje X positivo.
-descy(x, y)		Descomponer en el eje Y vector de x fuerza a y grados del eje X positivo.
-hipotenusa(x, y)	Hipotenusa segun norma euclideana raiz^2(x*x + y*y).
-vabs(x)			Valor absoluto de x.
-exp(x)			Valor de e elevado a a la x potencia.
-pot(x, y)		Valor de x a la y potencia.
-rz2(x)			Raiz cuadrada de x.
+suelo(x)            Menor numero entero inmediato, menor o igual a x.
+techo(x)            Mayor numero entero inmediato, mayor o igual a x.
+cpsg(x, y)          Copia el signo de y a x.
+fact(x)             Factorial de un numero (fact(5) = 1*2*3*4*5 = 120).
+seno(x)             Función trigonometrica seno.
+coseno(x)           Función trigonometrica coseno.
+tangente(x)         Función trigonometrica tangente.
+descx(x, y)         Descomponer en el eje X vector de x fuerza a y grados del eje X positivo.
+descy(x, y)         Descomponer en el eje Y vector de x fuerza a y grados del eje X positivo.
+hipotenusa(x, y)    Hipotenusa segun norma euclideana raiz^2(x*x + y*y).
+vabs(x)             Valor absoluto de x.
+exp(x)              Valor de e elevado a a la x potencia.
+pot(x, y)           Valor de x a la y potencia.
+rz2(x)              Raiz cuadrada de x.
+
+Imprimir texto en pantalla: por ejemplo, si quieres que se muestre el texto "Asquelito", debes hacer esto:
+    1*'Asquelito'
+Salida: Asquelito
