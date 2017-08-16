@@ -1,7 +1,7 @@
 # [ASQUEL](https://asquelito.tumblr.com/) 0.1
 ##### Lenguaje de programación orientado a matemáticas
 
-Un nuevo lenguaje de programación creado por el estudiante mexicano de ingeniería industrial y de sistemas [Alan Zatarain](http://zatarain.co.nf/). Está pensado para ser implementado en clases básicas de programación en la Universidad Autónoma de Ciudad Juárez (UACJ). 
+Un nuevo lenguaje de programación creado por el estudiante mexicano de ingeniería industrial y de sistemas [Alan Zatarain](https://soyzatarain.github.io/). Está pensado para ser implementado en clases básicas de programación en la Universidad Autónoma de Ciudad Juárez (UACJ). 
 
 ## Índice
 
@@ -61,5 +61,5 @@ Puedes obtener los documentos uno por uno, o todos en paquete en el sitio oficia
 
 ## Copyright y licencia
 
-©2017 [Alan Ramirez Zatarain](http://zatarain.co.nf). Asquel es cedido al público bajo la licencia de código abierto zatarain.
+©2017 [Alan Ramirez Zatarain](https://soyzatarain.github.io/). Asquel es cedido al público bajo la licencia comun de código abierto zatarain.
 
