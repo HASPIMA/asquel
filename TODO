@@ -1,9 +1,0 @@
-asquel.py:
-	- Crear parser propio
-	- Corrector de syntaxis
-    - Aumentar precision de funcion seno y coseno
-    - Incluir incognitas
-    - Funcion logaritmo
-    - Tokenizador
-    - Convertir biblioteca de funciones a lenguaje C
-    - Simplificador de expresiones x*7-3/8 --> (x*(7-3))/8
