@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Asquel interpreter
+Exec=/usr/share/asquelito/run.sh
+Type=Application
+StartupNotify=true
+Terminal=true
+Path=/usr/share/asquelito
+Icon=/usr/share/asquelito/icono.png
+Name[es_MX]=Interprete Asquel
