@@ -34,14 +34,13 @@ Cabe mencionar que el lenguaje aún no está del todo construido, por lo que car
 * Compatibel con Linux, BSD, Windows y MacOS ejecutando Python 2.x y Python 3.x
 
 ## ¿Cómo se ejecuta?
-
-###En POSIX (Linux, BSD, macOS):
+### En POSIX (Linux, BSD, macOS):
 Localiza la carpeta raíz, donde se encuentra el documeto asquel.py, abre una terminal y ejecuta: `./asquel.py`, si arroja error ejecuta `python asquel.py`
 
-###En Windows:
+### En Windows:
 Localiza la carpeta raíz, donde se encuentra el documento asquel.py y dale doble clic.
 
-###Sesión de jemplo:
+### Sesión de jemplo:
 Aquí se muestra un ejemplo de sesión con Asquel resolviendo operaciones sencillas y una expresión compleja, finalmente un error de denotación.
 ```bash
 Copyright (c)2017 Alan Ramirez Zatarain
