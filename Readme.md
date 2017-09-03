@@ -13,7 +13,7 @@
   <a href="https://asquelito.tumblr.com/">
     <img src="https://img.shields.io/badge/Estado-En%20pruebas-yellow.svg">
   </a>
-  <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-0.1.13-green.svg"></a>
+  <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-0.1.3-green.svg"></a>
 </p>
 <br>
 
