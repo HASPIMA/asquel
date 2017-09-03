@@ -40,7 +40,7 @@ Localiza la carpeta raíz, donde se encuentra el documeto asquel.py, abre una te
 ### En Windows:
 Localiza la carpeta raíz, donde se encuentra el documento asquel.py y dale doble clic.
 
-### Sesión de jemplo:
+### Sesión de ejemplo:
 Aquí se muestra un ejemplo de sesión con Asquel resolviendo operaciones sencillas y una expresión compleja, finalmente un error de denotación.
 ```bash
 Copyright (c)2017 Alan Ramirez Zatarain
