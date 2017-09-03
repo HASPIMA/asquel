@@ -1,42 +1,52 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+
+# asquel.py - Interface de entrada y salida standard al usuario
+# El presente documento es parte del proyecto Asquel, cedido
+# a todo el mundo bajo la LICENCIA COMUN DE CODIGO ABIERTO ZATARAIN.
+# Puedes encontrar una copia en doc/LICENSE o en https:://soyzatarain.github.io/LICENSE
 #
-# asquel.py
-# Interface for the user
-# Standard input and output.
-#
-# This is part of the Asquel project.
-# (c)2017 Alan Ramirez Zatarain
-# https://github.com/SoyZatarain/asquel
-#
+# Copyright (c)2017 Alan Ramirez Zatarain.
 
 from xolo import *
 
 limpiar()
 derechos()
 
-class Parsero(object):
+def main():
 
     if os.name == "posix":
-        recolector = chr(27)+"[1;32m"+"Asquelito$ "+chr(27)+"[0;37m"
-        error = chr(27)+"[0;91m"+"Error: La expresión está mal denotada."+chr(27)+"[0;37m"+"\n"
+        recolector = chr(27)+"[1;32m"+"Asquelito:~$ "+chr(27)+"[0;37m"
+        error = chr(27)+"[0;91m"+" Error: La expresión está mal denotada."+chr(27)+"[0;37m"+"\n"
     else:
-        recolector = "Asquelito/:> "
-        error = "Error: La expresión está mal denotada.\n"
+        recolector = "Asquelito:/> "
+        error = " Error: La expresión está mal denotada.\n"
 
-    def asquelito(self):
-        while True:
+    while True:
+        try:
             try:
-                expresion = raw_input(self.recolector)
-                parcial = Interprete(expresion)
-                if os.name == "posix":
-                    print(chr(27)+"[1;37m"+"%i\n" % parcial.interpretar())
-                else:
-                    print("%i\n" % parcial.interpretar())
-            except EOFError:
-                break
-            except:
-                print(self.error)
+                texto = raw_input(recolector)
+            except NameError:
+                texto = input(recolector)
+            except SyntaxError:
+                continue
 
-if __name__ == "__main__":
-    Parsero().asquelito()
+            resultado = Resolucion(Analizador(Procesar(texto))).resolver()
+
+            if os.name == 'posix':
+                print(chr(27)+"[1;37m", resultado, "\n")
+            else:
+                print(resultado)
+
+        except EOFError:
+            break
+
+        except:
+            if not texto:
+                continue
+            else:
+                print(error)
+                continue
+
+if __name__ == '__main__':
+    main()
