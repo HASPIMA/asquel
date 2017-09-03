@@ -3,7 +3,7 @@
   <br>
   <a href="https://asquelito.tumblr.com/"><img src="https://raw.githubusercontent.com/SoyZatarain/asquel/master/icono.png" alt="Asquelito" width="200"></a>
   <br>
-  Asquel 0.1.13
+  Asquel 0.1.3
   <br>
 </h1>
 
