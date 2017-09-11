@@ -4,49 +4,59 @@
 # asquel.py - Interface de entrada y salida standard al usuario
 # El presente documento es parte del proyecto Asquel, cedido
 # a todo el mundo bajo la LICENCIA COMUN DE CODIGO ABIERTO ZATARAIN.
-# Puedes encontrar una copia en doc/LICENSE o en https:://soyzatarain.github.io/LICENSE
+# Puedes encontrar una copia en doc/LICENSE o en https://github.com/SoyZatarain/asquel/blob/master/doc/LICENSE
 #
 # Copyright (c)2017 Alan Ramirez Zatarain.
 
-from xolo import *
+from asquetl import *
+import sys
 
-limpiar()
 derechos()
 
-def main():
-
-    if os.name == "posix":
-        recolector = chr(27)+"[1;32m"+"Asquelito:~$ "+chr(27)+"[0;37m"
-        error = chr(27)+"[0;91m"+" Error: La expresión está mal denotada."+chr(27)+"[0;37m"+"\n"
-    else:
-        recolector = "Asquelito:/> "
-        error = " Error: La expresión está mal denotada.\n"
-
-    while True:
-        try:
+def asquelito():
+    if len(sys.argv) == 2:
+        f = open(sys.argv[1], "r")
+        i = 0
+        for linea in f:
             try:
-                texto = raw_input(recolector)
-            except NameError:
-                texto = input(recolector)
-            except SyntaxError:
-                continue
+                i = i + 1
+                resultado = Resolucion(Analizador(Procesar(linea))).resolver()
+                print(i, resultado)
+            except EOFError:
+                break
 
-            resultado = Resolucion(Analizador(Procesar(texto))).resolver()
+            except:
+                if not linea:
+                    continue
+                else:
+                    print("Error en linea", i)
+                    continue
+        f.close()
+        print()
 
-            if os.name == 'posix':
-                print(chr(27)+"[1;37m", resultado, "\n")
-            else:
-                print(resultado)
+    else:
+        while True:
+            try:
+                try:
+                    texto = raw_input("Asquelito>>> ")
+                except NameError:
+                    texto = input("Asquelito>>> ")
+                except SyntaxError:
+                    continue
 
-        except EOFError:
-            break
+                resultado = Resolucion(Analizador(Procesar(texto))).resolver()
+    
+                print("%i\n" % resultado)
+    
+            except EOFError:
+                break
 
-        except:
-            if not texto:
-                continue
-            else:
-                print(error)
-                continue
+            except:
+                if not texto:
+                    continue
+                else:
+                    print("Error de denotación\n")
+            continue
 
 if __name__ == '__main__':
-    main()
+    asquelito()
