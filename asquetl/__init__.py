@@ -5,23 +5,8 @@
 #
 # Copyright (c)2017 Alan Ramirez Zatarain.
 
-import os
-import sys
-import platform
-
-def limpiar():
-    if os.name == "posix":  #Diferenciar entre sistemas
-        os.system ("clear") #Todos los posix aceptan el mismo comando para esto
-    else:
-        os.system ("cls")   #Windows acepta este comando
-
 def derechos():
-    if os.name == "posix":
-        sys.stdout.write("\x1b]2;Asquel 0.1.3 para %s\x07" % platform.system())  #Aqui se diferencia entre los posix (OS X, Linux, BSD, etc.)
-        print(chr(27)+"[1;33m"+'Copyright (c)2017 Alan Ramirez Zatarain')            #Copyrights
-        print('https://github.com/SoyZatarain/asquel/blob/master/doc/LICENSE\n'+chr(27)+"[0;37m")    #Solo actualizaciones, no cambios de licencia
-    else:
-        os.system ("title Asquel 0.1.3 para Windows")
+        print('INterprete Asquel version 0.2a')
         print('Copyright (c)2017 Alan Ramirez Zatarain')
         print('https://github.com/SoyZatarain/asquel/blob/master/doc/LICENSE\n')
 
