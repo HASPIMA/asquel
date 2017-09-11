@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://asquelito.tumblr.com/">
-    <img src="https://img.shields.io/badge/Estado-Inestable-red.svg">
+    <img src="https://img.shields.io/badge/Estado-Estable-green.svg">
   </a>
   <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-0.2a-green.svg"></a>
 </p>
