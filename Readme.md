@@ -92,9 +92,11 @@ alan@alan-PC:~/asquel$
 
 
 ## Descarga
-
+### Versión actual:
 - Puedes clonar este repositorio con `git clone git://github.com/SoyZatarain/asquel.git`
 - Tambien puedes dar clic [aquí](https://github.com/SoyZatarain/asquel/archive/master.zip) para descargar el paquete a través del navegador.
+### Versiones anteriores:
+Puedes descargar desde la versión 0.0, 0.1, etc. de [esta lista](https://sourceforge.net/projects/asquel-old/files/) alojada por SourceForge.
 
 ## Desarrollo futuro
 
