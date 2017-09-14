@@ -5,6 +5,8 @@
 #
 # Copyright (c)2017 Alan Ramirez Zatarain.
 
+from asquetl.diccionario import Diccionario
+
 def derechos():
         print('INterprete Asquel version 0.2a')
         print('Copyright (c)2017 Alan Ramirez Zatarain')
