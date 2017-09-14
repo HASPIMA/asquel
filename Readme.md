@@ -3,7 +3,7 @@
   <br>
   <a href="https://asquelito.tumblr.com/"><img src="https://raw.githubusercontent.com/SoyZatarain/asquel/master/icono.png" alt="Asquelito" width="200"></a>
   <br>
-  Asquel 0.2a
+  Asquel 0.2b
   <br>
 </h1>
 
@@ -13,40 +13,22 @@
   <a href="https://asquelito.tumblr.com/">
     <img src="https://img.shields.io/badge/Estado-Estable-green.svg">
   </a>
-  <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-0.2a-green.svg"></a>
+  <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-0.2b-green.svg"></a>
 </p>
 <br>
 
-## En esta versión...
+## ¿Qué es Asquel?
+Es un lenguaje de programación muy sencillo, con una sintaxis simple y de manejo fácil de aprender a través de una línea de comandos. EStá pensado para servir como primer lenguaje de programación para estudiantes universitarios que recurren a lenguajes más complejos como Java o C# para aprender, lo que resulta contra producente, ya que normalmente en los 6 meses que dura el curso de introducción a la programación no aprenden los conceptos básicos y después tienen problemas en clases superiores, o ya directamente reprueban.
+Asquel aún no está terminado, y la sintaxis aún se está diseñando, no persigue el propósito de equipararse a Python o Perl, por ejemplo, sino que apuesta por ser fácil de aprender en menos de un mes y ser el primer escalón de los estudiantes, por eso su sintaxis debe ser minimizada, compacta y fácil de leer.
+Asquel está implementado en Python, pero al diseñar la sintaxis por completo se trasladará a C++.
 
-Ahora podemos cargar archivos mediante linea de comandos, con la siguiente estructura:
-`[python o python3] asquel.py <archivo>`
-Donde entendemos que de no cargarse ningún archivo, se entrará en modo interactivo, tal como las versiones anteriores.
+## Modo de uso
 
-* Podemos cargar archivos con expresiones matemáticas como las que introduciríamos en el modo interactivo, separadas por línea y arrojará el resultado de cada expresión.
-* Las expresiones pueden tener la extensión y contenido que se desee
-* Capaz de procesar sumas, restas, multiplicaciones y divisiones
-* Actua según la jerarquía de resolución, asignando prioridades a cada operación y dividiendola en su forma más simple
-* Capacidad para incluir parentesis, estableciendo jerarquía personalizada
-* Código fácil de leer
-* Operciones con numeros negativos
-* El resultado se dará siempre con tantos decimales como haya disponibles
-* Facilmente modificable
-* Compatibel con Linux, BSD, Windows y MacOS ejecutando Python 2.x y Python 3.x
+Asquel tiene dos modos de uso, el interactivo y el interprete de archivos:
 
-## ¿Cómo se ejecuta?
-
-Puedes ejecutarlo en modo interactivo, o bien cargarle un archivo para ver sus nuevas caracteristicas, para esto se incluye el directorio "ejemplos".
-
-### En POSIX (Linux, BSD, macOS):
-Localiza la carpeta raíz, donde se encuentra el documeto asquel.py, abre una terminal y ejecuta: `./asquel.py`, si arroja error ejecuta `python asquel.py`
-
-### En Windows:
-Localiza la carpeta raíz, donde se encuentra el documento asquel.py y dale doble clic. Esto sólo para el modo interactivo. Para acceder al cargador de archivos, en el directorio donde se encuentra asquel.py abre
-un cmd y ejecuta `asquel.py archivo.txt`, entendiendo que "archivo.txt" lo puedes reemplazar por el nombre y la extensión de tu archivo de prueba.
-
-### Ejemplo de sesión en modo interactivo:
-Aquí se muestra un ejemplo de sesión con Asquel resolviendo operaciones sencillas y una expresión compleja, finalmente un error de denotación.
+### Modo interactivo
+Para acceder al modo interactivo, localizamos la carpeta raíz del proyecto, donde se encuentra el doicumento "asquel.py", abrir una terminal o simbolo del sistema ahí y ejecutar `[python o python3] asquel.py`.
+Tiene el bucle fetch-decode-execute, por lo que al ejecutarse, se comporta como una consola de comandos o simbolo de sistema, donde se pueden introducir ordenes para ser inmediatamente ejecutadas. Por ahora Asquel sólo acepta expresiones matemáticas (como las que meterías a una calculadora), por lo que una sesión en modo interactivo se ve algo así:
 ```bash
 Copyright (c)2017 Alan Ramirez Zatarain
 https://github.com/SoyZatarain/asquel/blob/master/doc/LICENSE
@@ -73,9 +55,13 @@ Asquelito:~$
 
 ```
 
-### Ejemplo de ejecución procesando un archivo:
-En este caso, el archivo "prueba.txt" que se incluye en el directorio "ejemplos".
+### Modo interprete de archivos:
+Podemos cargar un archivo para que asquel lo interprete directamente en vez de introducir las expresiones de una en una, podemos hacer un archivo que las contenga, de a una por cada línea, se puede consultar el directorio "ejemplos" que contiene una muestra de como se hace esto (aunque no es nada complicado, es intuitivo).
 
+La estructura del comando para cargar el archivo a ser interpretado es:
+`[python o python3] [-d] asquel.py <archivo>`
+
+Tal como se muestra, se puede usar el interprete python 2.x o python 3.x, pero se recomienda m[as [este [ultimo, ya que en python 2.x los decimales se cortan. Luego tenemos el modificador -d que es opcional y de ser usado, vacía los datos con su tipo asignado en forma de lista ordenada. el archivo ejecutable es asquel.py, es el que hace todo el trabajo junto con sus módulos internos. Finalemente, el último elemento de la línea es el archivo que vas a ingresar al interprete, por ejemplo "archivo.txt" que se incluye en la carpeta "ejemplos":
 ```
 alan@alan-PC:~/asquel$ python3 asquel.py prueba.txt
 Copyright (c)2017 Alan Ramirez Zatarain
@@ -91,6 +77,18 @@ Error en linea 5
 
 alan@alan-PC:~/asquel$
 ```
+
+## En esta versión:
+
+* Las expresiones pueden tener la extensión y contenido que se desee
+* Capaz de procesar sumas, restas, multiplicaciones y divisiones
+* Actua según la jerarquía de resolución, asignando prioridades a cada operación y dividiendola en su forma más simple
+* Capacidad para incluir parentesis, estableciendo jerarquía personalizada
+* Código fácil de leer
+* Operciones con numeros negativos
+* El resultado se dará siempre con tantos decimales como haya disponibles
+* Facilmente modificable
+* Compatibel con Linux, BSD, Windows y MacOS ejecutando Python 2.x y Python 3.x
 
 
 ## Descarga
