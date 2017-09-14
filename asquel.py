@@ -21,7 +21,7 @@ def asquelito():
             try:
                 i = i + 1
                 resultado = Resolucion(Analizador(Procesar(linea))).resolver()
-                print(i, resultado)
+                print("%i %s" % (i, resultado))
             except EOFError:
                 break
 
@@ -32,7 +32,13 @@ def asquelito():
                     print("Error en linea", i)
                     continue
         f.close()
-        print()
+        print("")
+
+    elif len(sys.argv) == 3:
+        if sys.argv[1] == "-d":
+            Diccionario().convertirEnSimbolos(open(sys.argv[2], "r").read())
+        else:
+            print("%s no es una opción válida.\n" % sys.argv[1])
 
     else:
         while True:
