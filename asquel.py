@@ -8,61 +8,18 @@
 #
 # Copyright (c)2017 Alan Ramirez Zatarain.
 
-from asquetl import *
-import sys
+import sys # Esto es para poder obtener los parametros
+from asquetl import Diccionario # La clase que procesa todo
 
-derechos()
+def procesar(contenidoDelArchivo): # Esta funcion conecta el archivo de entrada con asquetl.Diccionario
+    return Diccionario().lex(contenidoDelArchivo) # Devuelve la matriz de resultados
 
-def asquelito():
-    if len(sys.argv) == 2:
-        f = open(sys.argv[1], "r")
-        i = 0
-        for linea in f:
-            try:
-                i = i + 1
-                resultado = Resolucion(Analizador(Procesar(linea))).resolver()
-                print("%i %s" % (i, resultado))
-            except EOFError:
-                break
 
-            except:
-                if not linea:
-                    continue
-                else:
-                    print("Error en linea", i)
-                    continue
-        f.close()
-        print("")
-
-    elif len(sys.argv) == 3:
-        if sys.argv[1] == "-d":
-            Diccionario().convertirEnSimbolos(open(sys.argv[2], "r").read())
-        else:
-            print("%s no es una opción válida.\n" % sys.argv[1])
-
-    else:
-        while True:
-            try:
-                try:
-                    texto = raw_input("Asquelito>>> ")
-                except NameError:
-                    texto = input("Asquelito>>> ")
-                except SyntaxError:
-                    continue
-
-                resultado = Resolucion(Analizador(Procesar(texto))).resolver()
-    
-                print("%i\n" % resultado)
-    
-            except EOFError:
-                break
-
-            except:
-                if not texto:
-                    continue
-                else:
-                    print("Error de denotación\n")
-            continue
-
-if __name__ == '__main__':
-    asquelito()
+if __name__ == '__main__': # Si es ejecutado directamente
+    if len(sys.argv) == 2: # Si el usuario ingreso dos parametros
+        if sys.argv[1].endswith(".asq", 0): # Si la extension de archivo es .ASQ 
+            print(procesar(open(sys.argv[1], "r").read())) # Imprimir lo que la funcion procesar() devuelva
+        else: # Si la extension del archivo no es .ASQ
+            print(sys.argv[1], "no es un documento de Asquel") # Imprimir este aviso
+    else: # Si el usuario ingreso uno o mas de 2 parametros
+        print("Asquel interpreter 0.2c\nCopyright 2017 Alan Ramirez Zatarain\nhttps://raw.githubusercontent.com/SoyZatarain/asquel/master/doc/LICENSE\n\nUso: ./asquel.py archivo.asq") #Avisos
