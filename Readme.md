@@ -101,7 +101,7 @@ Puedes descargar desde la versión 0.0, 0.1, etc. de [esta lista](https://source
 ## Desarrollo futuro
 
 * Crear evaluador de expresiones
-* Crear funciones estándar como print(), por ejemplo
+* Crear funciones estándar como print(), por ejemplo <- __parcialmente implementado__
 * Crear estructura de flujo
 
 ## Licencia
