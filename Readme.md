@@ -3,7 +3,7 @@
   <br>
   <a href="https://asquelito.tumblr.com/"><img src="https://raw.githubusercontent.com/SoyZatarain/asquel/master/icono.png" alt="Asquelito" width="200"></a>
   <br>
-  Asquel 0.2d
+  Asquel 0.99rc1
   <br>
 </h1>
 
@@ -13,14 +13,13 @@
   <a href="https://asquelito.tumblr.com/">
     <img src="https://img.shields.io/badge/Estado-Estable-green.svg">
   </a>
-  <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-0.2d-green.svg"></a>
+  <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-0.99rc1-green.svg"></a>
 </p>
 <br>
 
 ## ¿Qué es Asquel?
-Es un lenguaje de programación muy sencillo, con una sintaxis simple y de manejo fácil de aprender a través de una línea de comandos. EStá pensado para servir como primer lenguaje de programación para estudiantes universitarios que recurren a lenguajes más complejos como Java o C# para aprender, lo que resulta contra producente, ya que normalmente en los 6 meses que dura el curso de introducción a la programación no aprenden los conceptos básicos y después tienen problemas en clases superiores, o ya directamente reprueban.
-Asquel aún no está terminado, y no persigue el propósito de equipararse a Python o Perl, por ejemplo, sino que apuesta por ser fácil de aprender en menos de un mes y ser el primer escalón de los estudiantes, por eso su sintaxis debe ser minimizada, compacta y fácil de leer.
-Asquel está implementado en Python.
+Asquel es un nuevo lenguaje de programación con la instención de ser usado como material didáctico en clases univesitarias de fundamentos de programación, como primer lenguaje de programación para estudiantes que quieran empezar a escribir código. Normalmente para esta tarea se emplean lenguajes muy complejos para un principiante, como Java o C#, lo que confunde al estudiante y genera un repudio a seguir programando luego de cumplir con la materia. Asquel tiene una sintaxis muy sencilla, pero conservando algunos elementos de lenguajes superiores para que los alumnos aprendan y conserven estos hábitos de escritura estricta. No se pretende crear un lenguaje complejo a nivel de python o perl, se renuncia a varios elementos de los lenguajes habituales para que los alumnos puedan aprender de a poco.
+Una vez conquistado asquel, la transición a lenguajes más completos como Python o C es notablemente más fácil.
 
 ## Ejemplo de programa hecho en Asquel
 ```
@@ -37,61 +36,35 @@ Como se puede apreciar, se usa punto y coma (;) como separador de declaraciones,
 
 ## Modo de uso
 
-Asquel se encuentra actualmente en una etapa intermedia entre el algoritmo de procesamiento obsoleto a uno más preciso y con capacidad para procesar los elementos del lenguaje que aún no están disponibles, como las variables, funciones, estructuras, etc.,
-Justo ahora, Asquel puede vaciar la estructura de un programa con escrito con su nueva sintaxis recien creada.
-Sin embrago, Asquel no está terminado y de hecho, a pesar de que esto representa un avance abismal, aún falta la parte más importante, que es la resolución del programa y la evaluación de expresiones. Una parte de estos dos elementos ya está, pero falta integrarlos, esto tal vez necesite un puente que envíe los datos de expresiones y devuelva el reultado final, solamente inyectándolo en la estructura que ya tenemos. Es teoría todavía, pero todo apunta a que será así.
-Para probar como es que Asquel procesa la nueva sintaxis, puedes probarlo con el archivo "prueba.asq" incluido en la carpeta "ejemplos".
-`python asquel.py ejemplos/prueba.asq`
-Así se vaciará a la salida estándar la estructura resultante de proesar el programa de Asquel con la sintaxis nueva.
-Al ejecutar esa orden, Asquel devolvera la estructura del programa, como se muestra más abajo:
+Asquel funciona de manera muy similar (o identica) a interpretes ya conocidos. Es a través de una línea de comandos, invocando a python a ejecutar asquel, e indicándole a éste último que cargue un archivo, de la siguiente forma:
+`python asquel.py nombre-del-archivo.asq`
+Asquel devolverá el resultado del programa que se haya introducido, por ahora la única función que puede interactuar con la salida estándar es imprimir().
+Aquí se muestra un ejemplo de ejecución de Asquel procesando el programa "prueba.asq" incluido en la carpeta "ejemplos":
 
 ```
 alan@alan-PC:~/asquel$ ./asquel.py prueba.asq
-Asquel interpreter 0.2d
+Asquel interpreter 0.99rc1
 Copyright 2017 Alan Ramirez Zatarain
 https://raw.githubusercontent.com/SoyZatarain/asquel/master/doc/LICENSE
 
-'asquelito'
-	'igual'
-		'a'
-		'-'
-			'+'
-				'1'
-				'*'
-					'1'
-					'8'
-			'/'
-				'/'
-					'9'
-					'6'
-				'17'
-	'igual'
-		'b'
-		'7'
-	'igual'
-		'a'
-		'+'
-			'a'
-			'b'
-	'funcion'
-		'imprimir'
-		'+'
-			'a'
-			'1'
+16.911764705882355
 
 alan@alan-PC:~/asquel$ 
+
 ```
+El 16.9117... aparece porque hay una llamada a imprimir() dentro de prueba.asq y lo que se muestra es el resultado de procesar sus parametros.
+Por ahora imprimir() sólo procesa expresiones matemáticas, pero ya se trabaja en incluir cadenas de texto.
 
 ## En esta versión:
 
-* Sintaxis creada
-* Correcciones menores al simobolizador
-* Modelo de procesamiento establecido, de mayor nivel hacia abajo.
+* Programas ya pueden ser procesados y arrojar resultados a salida con imprimir()
+* Completa integración de las clases incluidas en asquetl
+* Asquel ya se puede considerar un lenguaje de programación y se encuentra a pocos pasos de alcanzar la meta de ser apto para instruir a los alumnos en fundamentos de programación.
 
 
 ## Descarga
 ### Última versión estable:
-[Asquel 0.1.13](https://sourceforge.net/projects/asquel-old/files/asquel-0.1.3.zip/download) es la mejor versión de asquel, es anterior al cambio de modelo y tiene todas las caracteristicas que se habían conseguido como el modo interactivo, analisis de archivos, gestor de errores entre otros.
+[Asquel 0.1.13](https://sourceforge.net/projects/asquel-old/files/asquel-0.1.3.zip/download) es la mejor versión de asquel, es anterior al cambio de modelo y tiene todas las caracteristicas que se habían conseguido como el modo interactivo, analisis de archivos, gestor de errores entre otros, pero carece de sintaxis, sólo procesa expresiones matemáticas.
 ### Versión actual:
 - Puedes clonar este repositorio con `git clone git://github.com/SoyZatarain/asquel.git`
 - Tambien puedes dar clic [aquí](https://github.com/SoyZatarain/asquel/archive/master.zip) para descargar el paquete a través del navegador.
@@ -100,9 +73,9 @@ Puedes descargar desde la versión 0.0, 0.1, etc. de [esta lista](https://source
 
 ## Desarrollo futuro
 
-* Crear evaluador de expresiones
-* Crear funciones estándar como print(), por ejemplo <- __parcialmente implementado__
-* Crear estructura de flujo
+* Extender las funciones estándar
+* Añadir cadenas a imprimir()
+* Mudarnos a C++
 
 ## Licencia
 
