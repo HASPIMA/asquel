@@ -9,6 +9,7 @@ from abc import ABC, abstractmethod
 import re
 
 class Diccionario:
+
     def __init__(self):
         simbolos = [
             ("numero", "[0-9]+"),
@@ -18,8 +19,10 @@ class Diccionario:
             ("nombre", "[A-Za-z][A-Za-z0-9]*"),
             ("igual", "="),
             ("espacio", "\s+"),
-            ("separador", ";")
+            ("separador", ";"),
+            ("nada", "Null")
         ]
+
         concatenado = '|'.join("(?P<{}>{})".format(tipo, valor) for (tipo, valor) in simbolos)
         self.expresion = re.compile(concatenado)
 
@@ -38,8 +41,8 @@ class Diccionario:
             raise ValueError("Error 001")
         return simbolos
 
-
 class Analizador:
+
 	def analizar(self, simbolos):
 		self.simbolos = simbolos
 		self.posicion = 0
@@ -50,9 +53,11 @@ class Analizador:
 			fondo.modificadores.append(self.dividirDeclaracion())
 		return fondo
 
+
 	def comparar(self, *valorEsperado):
 		if self.simbolo[1] not in valorEsperado:
 			raise ValueError("Error 002: se esperaba " + str(valorEsperado) + ". pero se encontro " + self.simbolo[1])
+
 
 	def simbolizar(self):
 		try:
@@ -60,6 +65,7 @@ class Analizador:
 		except IndexError:
 			self.simbolo = (None, "EOF")
 		self.posicion += 1
+
 
 	def dividirDeclaracion(self):
 		self.comparar("nombre")
@@ -82,6 +88,7 @@ class Analizador:
 		self.simbolizar()
 		return fondo
 
+
 	def convertirTermino(self):
 		fondo = self.convertirFactor()
 		while self.simbolo[1] == "segundaPrioridad":
@@ -92,6 +99,7 @@ class Analizador:
 			fondoDelEslabon.segundoNum = numero
 			fondo = fondoDelEslabon
 		return fondo
+
 
 	def convertirFactor(self):
 		fondo = self.analizarPorValor()
@@ -104,6 +112,7 @@ class Analizador:
 			fondo = fondoDelEslabon
 		return fondo
 
+
 	def analizarPorValor(self):
 		self.comparar("nombre", "numero")
 		if self.simbolo[1] == "nombre":
@@ -113,8 +122,8 @@ class Analizador:
 		self.simbolizar()
 		return fondo
 
-
 class Nivel(ABC):
+
 	@abstractmethod
 	def cargar(self, enlazador):
 		pass
