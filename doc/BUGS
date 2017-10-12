@@ -1,2 +1,0 @@
-A:0001
-- La entrada protocolaria de python3 (return 0) genera un bucle infinito que lanza un error de denotación.
