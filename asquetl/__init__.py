@@ -19,10 +19,8 @@ class Diccionario:
             ("nombre", "[A-Za-z][A-Za-z0-9]*"),
             ("igual", "="),
             ("espacio", "\s+"),
-            ("separador", ";"),
-            ("nada", "Null")
+            ("separador", ";")
         ]
-
         concatenado = '|'.join("(?P<{}>{})".format(tipo, valor) for (tipo, valor) in simbolos)
         self.expresion = re.compile(concatenado)
 
@@ -41,6 +39,7 @@ class Diccionario:
             raise ValueError("Error 001")
         return simbolos
 
+
 class Analizador:
 
 	def analizar(self, simbolos):
@@ -53,11 +52,9 @@ class Analizador:
 			fondo.modificadores.append(self.dividirDeclaracion())
 		return fondo
 
-
 	def comparar(self, *valorEsperado):
 		if self.simbolo[1] not in valorEsperado:
 			raise ValueError("Error 002: se esperaba " + str(valorEsperado) + ". pero se encontro " + self.simbolo[1])
-
 
 	def simbolizar(self):
 		try:
@@ -65,7 +62,6 @@ class Analizador:
 		except IndexError:
 			self.simbolo = (None, "EOF")
 		self.posicion += 1
-
 
 	def dividirDeclaracion(self):
 		self.comparar("nombre")
@@ -88,7 +84,6 @@ class Analizador:
 		self.simbolizar()
 		return fondo
 
-
 	def convertirTermino(self):
 		fondo = self.convertirFactor()
 		while self.simbolo[1] == "segundaPrioridad":
@@ -99,7 +94,6 @@ class Analizador:
 			fondoDelEslabon.segundoNum = numero
 			fondo = fondoDelEslabon
 		return fondo
-
 
 	def convertirFactor(self):
 		fondo = self.analizarPorValor()
@@ -112,7 +106,6 @@ class Analizador:
 			fondo = fondoDelEslabon
 		return fondo
 
-
 	def analizarPorValor(self):
 		self.comparar("nombre", "numero")
 		if self.simbolo[1] == "nombre":
@@ -121,6 +114,7 @@ class Analizador:
 			fondo = cima(self.simbolo[0])
 		self.simbolizar()
 		return fondo
+
 
 class Nivel(ABC):
 
@@ -218,3 +212,82 @@ class saltarAEslabon(nivelComputado):
 
 	def cargar(self, enlazador):
 		return enlazador.funcion(self)
+
+class Evaluador:
+
+	def evaluar(self, nivel):
+		self.variables = {}
+		self.resultadoParcial = ""
+		self.resolverNivel(nivel)
+		return self.resultadoParcial
+
+	def cargarPrograma(self, nivel):
+		for declaracion in nivel.modificadores:
+			declaracion.cargar(self)
+
+	def resolverNivel(self, nivel):
+		try:
+			return nivel.cargar(self)
+		except AttributeError:
+			raise ValueError("Error 003")
+
+	def primeraPrioridad(self, nivel):
+		try:
+			nivel1 = self.resolverNivel(nivel.primerNum)
+			nivel2 = self.resolverNivel(nivel.segundoNum)
+		except AttributeError:
+			raise ValueError("Error 004: Numero de operandos equivocado.")
+		if nivel.valor == "*":
+			return nivel1 * nivel2
+		elif nivel.valor == "/":
+			return nivel1 / nivel2
+		else:
+			raise ValueError("Error 005: imposible conocer el valor de " + nivel.valor + ".")
+
+	def segundaPrioridad(self, nivel):
+		try:
+			nivel1 = self.resolverNivel(nivel.primerNum)
+			nivel2 = self.resolverNivel(nivel.segundoNum)
+		except AttributeError:
+			raise ValueError("Error 004: Numero de operandos equivocado.")
+		if nivel.valor == "+":
+			return nivel1 + nivel2
+		elif nivel.valor == "-":
+			return nivel1 - nivel2
+		else:
+			raise ValueError("Error 006: El valor" + nivel.valor + "es incorrecto.")
+
+	def cargarNivelAnidado(self, nivel):
+		if not isinstance(nivel.primerNum, puntualizarEslabon):
+			raise ValueError("Error 007: Error de asignacion")
+		try:
+			nivel1 = nivel.primerNum.valor
+			nivel2 = self.resolverNivel(nivel.segundoNum)
+		except AttributeError:
+			raise ValueError("Error 004: Numero de operandos equivocado.")
+		self.variables[nivel1] = nivel2
+
+	def funcion(self, nivel):
+		if not isinstance(nivel.primerNum, puntualizarEslabon):
+			raise ValueError("Error 008")
+		try:
+			nombreDeLaFuncion = nivel.primerNum.valor
+			modificador = self.resolverNivel(nivel.segundoNum)
+		except AttributeError:
+			raise ValueError("Error 004: Numero de operandos equivocado.")
+		if nombreDeLaFuncion == "imprimir":
+			self.resultadoParcial += str(modificador) + "\n"
+		else:
+			raise ValueError("Error 010: La funcion " + nombreDeLaFuncion + " no esta definida.")
+
+	def cargarPorIndice(self, nivel):
+		try:
+			return self.variables[nivel.valor]
+		except KeyError:
+			raise ValueError("Error 011: " + nivel.valor + " no esta definido.")
+
+	def cargarPorValor(self, nivel):
+		try:
+			return int(nivel.valor)
+		except ValueError:
+			raise ValueError("Error 011: " + nivel.valor + " no esta definido.")
