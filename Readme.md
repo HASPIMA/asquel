@@ -3,7 +3,7 @@
   <br>
   <a href="https://asquelito.tumblr.com/"><img src="https://raw.githubusercontent.com/SoyZatarain/asquel/master/icono.png" alt="Asquelito" width="200"></a>
   <br>
-  Asquel 0.99rc1
+  Asquel 0.99rc2
   <br>
 </h1>
 
@@ -13,7 +13,7 @@
   <a href="https://asquelito.tumblr.com/">
     <img src="https://img.shields.io/badge/Estado-Estable-green.svg">
   </a>
-  <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-0.99rc1-green.svg"></a>
+  <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-0.99rc2-green.svg"></a>
 </p>
 <br>
 
@@ -31,7 +31,7 @@ imprimir(a + 1);
 En la primera línea vemos la asignación de la variable "a" con una expresión compleja.
 En la segunda asignamos la variable "b" igual a 7.
 En la tercera línea re asignamos la variable "a" como el resultado de sumar ella misma más "b".
-Finalmente nuestra primera fucnión estándar, imprimir().
+Finalmente nuestra primera función estándar, imprimir().
 Como se puede apreciar, se usa punto y coma (;) como separador de declaraciones, principalmente para que los estudiantes se acostumbren a este tipo de elementos obligatorios.
 
 ## Modo de uso
@@ -57,6 +57,7 @@ Por ahora imprimir() sólo procesa expresiones matemáticas, pero ya se trabaja 
 
 ## En esta versión:
 
+* Correcciones menores y limpieza del código
 * Programas ya pueden ser procesados y arrojar resultados a salida con imprimir()
 * Completa integración de las clases incluidas en asquetl
 * Asquel ya se puede considerar un lenguaje de programación y se encuentra a pocos pasos de alcanzar la meta de ser apto para instruir a los alumnos en fundamentos de programación.
