@@ -139,19 +139,6 @@ Uso: python3 asquel.py [opcion] <archivo.asq>
   -a, --arbol            Muestra arbol de sintaxis abstracta
 ```
 
-Descargar
-------------------------
-| Sistema Operativo | Arquitectura | Archivo |
-| ------------------------ | ---------------- | ---------- |
-| Windows | x86 | asquel-1.0-winx86.zip |
-| Windows | x64 | asquel-1.0-winx64.zip |
-| GNU/Linux | x86 | asquel-1.0-linuxx86.tar.gz |
-| GNU/Linux | x64 | asquel-1.0-linuxx64.tar.gz |
-| FreeBSD | x86 | asquel-1.0-freebsdx86.tbz |
-| FreeBSD | x64 | asquel-1.0-freebsdx64.tbz |
-
-** Nota: Aunque existen estas distribuciones binarias, siempre se recomienda mejor construirlo desde código fuente ** (Más abajo se explica cómo).
-
 Construir desde código fuente
 ------------------------
 Puedes obtener el código fuente de las siguientes formas:
