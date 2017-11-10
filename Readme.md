@@ -1,9 +1,8 @@
-
 <h1 align="center">
   <br>
-  <a href="https://asquelito.tumblr.com/"><img src="https://raw.githubusercontent.com/SoyZatarain/asquel/master/icono.png" alt="Asquelito" width="200"></a>
+  <a href="https://asquelito.tumblr.com/"><img src="brand.png" alt="Asquelito"></a>
   <br>
-  Asquel 0.99rc2
+  Lenguaje Asquel
   <br>
 </h1>
 
@@ -13,70 +12,185 @@
   <a href="https://asquelito.tumblr.com/">
     <img src="https://img.shields.io/badge/Estado-Estable-green.svg">
   </a>
-  <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-0.99rc2-green.svg"></a>
+  <a href="https://asquelito.tumblr.com/"><img src="https://img.shields.io/badge/Versi%C3%B3n-1.0-green.svg"></a>
 </p>
 <br>
+**Asquel** es materal didáctico para clases de fundamentos de programación en forma de un lenguaje de programación sencillo orientado a matemáticas, pensado para ser el primer escalón entre la teoría y un lenguaje de programación listo para producción.
 
-## ¿Qué es Asquel?
-Asquel es un nuevo lenguaje de programación con la intención de ser usado como material didáctico en clases univesitarias de fundamentos de programación, como primer lenguaje de programación para estudiantes que quieran empezar a escribir código. Normalmente para esta tarea se emplean lenguajes muy complejos para un principiante, como Java o C#, lo que confunde al estudiante y genera un repudio a seguir programando luego de cumplir con la materia. Asquel tiene una sintaxis muy sencilla, pero conservando algunos elementos de lenguajes superiores para que los alumnos aprendan y conserven estos hábitos de escritura estricta. No se pretende crear un lenguaje complejo a nivel de python o perl, se renuncia a varios elementos de los lenguajes habituales para que los alumnos puedan aprender de a poco.
-Una vez conquistado asquel, la transición a lenguajes más completos como Python o C es notablemente más fácil.
+Asquel está implementado en Python, compilado a un ejecutable mediante la aplicación [Nuitka](http://nuitka.net/), por lo que de no existir una distribución binaria para el sistema en el que necesitas ejecutarlo, puedes usarlo en su forma de código fuente con el interprete de Python 3.x.
 
-## Ejemplo de programa hecho en Asquel
+La sintaxis extremadamente sencilla de Asquel permiten ser aprendido en un máximo de un mes, y establece elementos comunes de lenguajes populares para que los alumnos se familiarizen con tales conceptos.
+
+Tu primer programa en Asquel
+------------------------
+Siendo un lenguaje orientado a matemáticas, no hay manejo de tipos char o string en Asquel, en su lugar, sólo trabajamos con valores numericos. El siguiente es un ejemplo incluido en el archivo `ejemplos/prueba.asq`.
+
 ```
 a = 1 + 1 * 8 - 9 / 6 / 17;
 b = 7;
 a = a + b;
 imprimir(a + 1);
 ```
-En la primera línea vemos la asignación de la variable "a" con una expresión compleja.
-En la segunda asignamos la variable "b" igual a 7.
-En la tercera línea re asignamos la variable "a" como el resultado de sumar ella misma más "b".
-Finalmente nuestra primera función estándar, imprimir().
-Como se puede apreciar, se usa punto y coma (;) como separador de declaraciones, principalmente para que los estudiantes se acostumbren a este tipo de elementos obligatorios.
 
-## Modo de uso
-
-Asquel funciona de manera muy similar (o identica) a interpretes ya conocidos. Es a través de una línea de comandos, invocando a python a ejecutar asquel, e indicándole a éste último que cargue un archivo, de la siguiente forma:
-`python asquel.py nombre-del-archivo.asq`
-Asquel devolverá el resultado del programa que se haya introducido, por ahora la única función que puede interactuar con la salida estándar es imprimir().
-Aquí se muestra un ejemplo de ejecución de Asquel procesando el programa "prueba.asq" incluido en la carpeta "ejemplos":
+Al ejecutarlo, se verá algo así:
 
 ```
-alan@alan-PC:~/asquel$ ./asquel.py prueba.asq
-Asquel interpreter 0.99rc1
+alan@alan-PC:~$ asquel prueba.asq
+16.911764705882355
+
+alan@alan-PC:~$ 
+```
+
+Sintaxis
+------------------------
+La sintaxis es tan sencilla como esto:
+
+* Las variables sólo se pueden simbolizar con una letra o una palabra, por ejemplo, a la variable `a` le asignaremos el valor de 1 y a `var` le asignamos valor de 2 de la siguente forma:
+```
+Esto está bien:
+a = 1;
+var = 2;
+```
+
+* Todos los valores deben ser numericos, eneros (integer) o decimales (float):
+```
+Esto está bien:
+a = 1;
+
+Esto está mal y arrojará error:
+a = "Hola";
+```
+
+* Se puede asignar una expresión a una variable, lo que devolverá será el resultado de evaluar y resolver la expresión respetando jerarquía de resolución:
+```
+Ejemplo:
+a = 1 / 2 * 3 - 7 / 8 * 7;
+
+También se pueden incluir variables predefinidas en la expresión:
+a = 1 + 5;
+b = 19 - a;
+```
+
+* Las variables se pueden reasignar a si mismas:
+```
+Ejemplo:
+a = 19 * 7;
+a = a + 2;
+```
+
+* Siempre deben usarse separadores, en el caso de Asquel se usa el punto y coma (;):
+```
+Esto está bien:
+a = 1;
+b = 19 * a;
+c = 14 / 45 * 78 - 65 + 78 * 87 / 78 + b;
+d = 192 / 168 * b - 254;
+
+Esto está mal y arrojará error:
+a = 1
+b = 19 * a
+c = 14 / 45 * 78 - 65 + 78 * 87 / 78 + b
+d = 192 / 168 * b - 254
+```
+
+* La función imprimir() es el único elemento de Asquel que puede interactuar con la salida estándar (la terminal en Linux o simbolo del sistema en Windows), y se puede usar de las siguientes formas:
+```
+Para imprimir una variable:
+a = 1;
+b = 19 * a;
+c = 14 / 45 * 78 - 65 + 78 * 87 / 78 + b;
+d = 192 / 168 * b - 254;
+imprimir(d);
+
+Para imprimir un número:
+imprimir(12);
+
+Para imprimir el resultado de una expresión:
+imprimir(13 / 24 * 24 - 35 + 345);
+
+Para imprimir una expresión incluida una variable:
+a = 13 / 24 * 34 - 35 + 24;
+imprimir(134 / 687 * 12 / 467 + 35 - a * 24 / 24 * 1);
+```
+
+* La expresiones pueden contener parentesis, sumas, restas, multiplicaciones y divisiones:
+```
+a = 123 / (23 * 34) * 35456 - (131243 +2353655) / (75 - 2)
+```
+
+* Para ejecutar alguno de estos programas de ejemplo, debes guardarlos en un archivo de texto plano con extensión .ASQ obligatoriamente o Asquel no lo cargará. También puedes usar el archivo de ejemplo que se incluye en la carpeta `ejemplos/`.
+Una vez que tienes tu archivo listo para ser ejecutado, y haz instalado Asquel, puedes ejecutar tus programas con una línea tan simple como esta:
+```
+asquel archivo.asq
+```
+
+Opciones de línea de comandos
+------------------------
+```
+alan@alan-PC:~$ asquel
+Asquel interpreter 1.0
 Copyright 2017 Alan Ramirez Zatarain
 https://raw.githubusercontent.com/SoyZatarain/asquel/master/doc/LICENSE
 
-16.911764705882355
+Uso: python3 asquel.py [opcion] <archivo.asq>
 
-alan@alan-PC:~/asquel$ 
-
+  Opciones:
+  -d, --diccionario      Muestra asignaci[on de tipo a los simbolos
+  -a, --arbol            Muestra arbol de sintaxis abstracta
 ```
-El 16.9117... aparece porque hay una llamada a imprimir() dentro de prueba.asq y lo que se muestra es el resultado de procesar sus parametros.
-Por ahora imprimir() sólo procesa expresiones matemáticas, pero ya se trabaja en incluir cadenas de texto.
 
-## En esta versión:
+Descargar
+------------------------
+| Sistema Operativo | Arquitectura | Archivo |
+| ------------------------ | ---------------- | ---------- |
+| Windows | x86 | asquel-1.0-winx86.zip |
+| Windows | x64 | asquel-1.0-winx64.zip |
+| GNU/Linux | x86 | asquel-1.0-linuxx86.tar.gz |
+| GNU/Linux | x64 | asquel-1.0-linuxx64.tar.gz |
+| FreeBSD | x86 | asquel-1.0-freebsdx86.tbz |
+| FreeBSD | x64 | asquel-1.0-freebsdx64.tbz |
 
-* Correcciones menores y limpieza del código
-* Programas ya pueden ser procesados y arrojar resultados a salida con imprimir()
-* Completa integración de las clases incluidas en asquetl
-* Asquel ya se puede considerar un lenguaje de programación y se encuentra a pocos pasos de alcanzar la meta de ser apto para instruir a los alumnos en fundamentos de programación.
+** Nota: Aunque existen estas distribuciones binarias, siempre se recomienda mejor construirlo desde código fuente ** (Más abajo se explica cómo).
 
+Construir desde código fuente
+------------------------
+Puedes obtener el código fuente de las siguientes formas:
 
-## Descarga
-### Última versión estable:
-[Asquel 0.1.13](https://sourceforge.net/projects/asquel-old/files/asquel-0.1.3.zip/download) es la mejor versión de asquel, es anterior al cambio de modelo y tiene todas las caracteristicas que se habían conseguido como el modo interactivo, analisis de archivos, gestor de errores entre otros, pero carece de sintaxis, sólo procesa expresiones matemáticas.
-### Versión actual:
-- Puedes clonar este repositorio con `git clone git://github.com/SoyZatarain/asquel.git`
-- Tambien puedes dar clic [aquí](https://github.com/SoyZatarain/asquel/archive/master.zip) para descargar el paquete a través del navegador.
-### Versiones anteriores:
-Puedes descargar desde la versión 0.0, 0.1, etc. de [esta lista](https://sourceforge.net/projects/asquel-old/files/) alojada por SourceForge.
+* Descarga [aquí](https://github.com/SoyZatarain/asquel/archive/master.zip) un paquete comprimido a través del navegador.
+* Clona este reporitorio con `git clone git://github.com/SoyZatarain/asquel.git`.
+             
+#### En GNU/Linux, BSD y macOS
 
-## Desarrollo futuro
+Asegurate de tener instalados [Python 3.x](https://www.python.org/downloads/) y [Nuitka](http://nuitka.net/pages/download.html).
+La rutina es sencilla, los pasos de construcción de toda la vida:
+1. En la carpeta raíz del proyecto (donde se encuentra asquel.py) ejecuta`chmod +x configure`
+2. Ejecuta `./configure`
+3. Se generará un Makefile, ejecuta `make`
+4. Cuando termine de compilar, ejecuta `make install`
 
-* Extender las funciones estándar
-* Añadir cadenas a imprimir()
-* Mudarnos a C++
+También incluye la opción `make clean` para limpiar el proyecto y `make remove` para desinstalar asquel de tu sistema.
+
+#### En Windows
+Asegurate de tener instalados [Python 3.x](https://www.python.org/downloads/) y [Nuitka](http://nuitka.net/pages/download.html).
+Da doble clic a `build.bat` y luego como administrador en el simbolo del sistema ejecutas `install.bat`. Tambien se incluyen `clean.bat` para limpiar el proyecto y `remove.bat` para desinstalarlo de tu sistema.
+
+Ejecutar desde código fuente
+------------------------
+Debido a que Asquel está escrito en Python, puede ser ejecutado directamente sin tener que compilarse. Para esto puedes usarlo de la siguiente forma en cualquier sistema operativo que pueda ejecutar Python 3.x:
+```
+python asquel.py archivo.asq
+```
+Nótese que en sistemas POSIX se diferencía a Python 2.x y 3.x a través del nombre de su ejecutable, por lo que probablemente deba ser `python3` en vez de `python`.
+
+Contribuir
+-------------------------
+Me sentiré muy feliz si encuentras a Asquel útil para tus proyectos personales, educativos, experimentales o simplemente por curiosidad, ya que se puede rescatar mucho de él, como el evaluador de expresiones, el procesador de simbolos, el evaluador, etc.
+Si deseas contribuir con código que dotaría a Asquel de nuevas características puedes hacerlo libremente creando un pull request, o sometiendo tus cambios directamente a revisión a través de mis vías de contacto disponibles en [mi sitio de github](https://soyzatarain.github.com/) o aquí más abajo.
+Te invito a que hagas un fork de Asquel y lo mejores según tus necesidades, si sientes que tienes una mejor idea y por tanto tu desarrollo debe apartarse de la línea original, tienes mi bendición y licencia para hacerlo. No estas obligado a avisarme, pero si pudieras, me encantaría saber en qué te ayudó Asquel.
+
+Soporte
+-------------------------
+Si deseas discutir algún aspecto de Asquel directamente conmigo o tienes alguna duda, puedes consultarme mediante las redes sociales descritas hasta el fondo de este documento.
 
 ## Licencia
 
