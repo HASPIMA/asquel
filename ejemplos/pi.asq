@@ -1,0 +1,4 @@
+entero = 3;
+decimales = 17699/125000;
+pi = entero+decimales;
+imprimir(pi);
