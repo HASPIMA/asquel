@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 # asquetl/__init__.py - Modulo de funciones internas de Asquel
 # El presente documento es parte del proyecto Asquel, cedido
 # a todo el mundo bajo la LICENCIA COMUN DE CODIGO ABIERTO ZATARAIN.
@@ -236,13 +239,13 @@ class Evaluador:
 			nivel1 = self.resolverNivel(nivel.primerNum)
 			nivel2 = self.resolverNivel(nivel.segundoNum)
 		except AttributeError:
-			raise ValueError("Error 004: Numero de operandos equivocado.")
+			raise ValueError("Error 004: Numero de operandos equivocado.") #6
 		if nivel.valor == "*":
 			return nivel1 * nivel2
 		elif nivel.valor == "/":
 			return nivel1 / nivel2
 		else:
-			raise ValueError("Error 005: imposible conocer el valor de " + nivel.valor + ".")
+			raise ValueError("Error 005: imposible conocer el valor de " + nivel.valor + ".") #8
 
 	def segundaPrioridad(self, nivel):
 		try:
@@ -255,7 +258,7 @@ class Evaluador:
 		elif nivel.valor == "-":
 			return nivel1 - nivel2
 		else:
-			raise ValueError("Error 006: El valor" + nivel.valor + "es incorrecto.")
+			raise ValueError("Error 006: Valor erróneo " + nivel.valor + ".")
 
 	def cargarNivelAnidado(self, nivel):
 		if not isinstance(nivel.primerNum, puntualizarEslabon):
@@ -269,7 +272,7 @@ class Evaluador:
 
 	def funcion(self, nivel):
 		if not isinstance(nivel.primerNum, puntualizarEslabon):
-			raise ValueError("Error 008")
+			raise ValueError("Error 008") #10
 		try:
 			nombreDeLaFuncion = nivel.primerNum.valor
 			modificador = self.resolverNivel(nivel.segundoNum)
@@ -278,16 +281,16 @@ class Evaluador:
 		if nombreDeLaFuncion == "imprimir":
 			self.resultadoParcial += str(modificador) + "\n"
 		else:
-			raise ValueError("Error 010: La funcion " + nombreDeLaFuncion + " no esta definida.")
+			raise ValueError("Error 009: La funcion " + nombreDeLaFuncion + " no esta definida.")
 
 	def cargarPorIndice(self, nivel):
 		try:
 			return self.variables[nivel.valor]
 		except KeyError:
-			raise ValueError("Error 011: " + nivel.valor + " no esta definido.")
+			raise ValueError("Error 010: " + nivel.valor + " no esta definido.")
 
 	def cargarPorValor(self, nivel):
 		try:
 			return int(nivel.valor)
 		except ValueError:
-			raise ValueError("Error 011: " + nivel.valor + " no esta definido.")
+			raise ValueError("Error 011: " + nivel.valor + " esta fuera de rango.")
