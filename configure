@@ -1,0 +1,47 @@
+#!/bin/bash
+
+existe()
+{
+  command -v "$1" >/dev/null 2>&1
+}
+
+shido="1"
+if existe python3; then
+  echo 'python3 está instalado!'
+  primero="1"
+else
+  echo 'Debes tener python 3.x (python3). Por favor descarga e instala Python 3.x y vuelve a ejecutar este script cuando estés listo'
+  primero="0"
+fi
+
+if [ -f /usr/bin/nuitka ]; then
+    echo "Nuitka está instalado!"
+    segundo="1"
+else
+    echo 'Debes tener Nuitka para compilar Asquel. Por favor descarga e instala Nuitka y vuelve a ejecutar este script cuando estés listo'
+    segundo="0"
+fi
+
+if [ $primero = $shido ] && [ $segundo = $shido ]; then
+    echo 'Generando Makefile...'
+    pyver=$(python3 <<< "import sys;print(sys.version[0:3])" 2>&1)
+    makefile="all:
+	nuitka --recurse-all --python-version='${pyver}' --output-dir=bin asquel.py
+	mv bin/asquel.exe bin/asquel
+
+clean:
+	rm -r bin
+
+install:
+	sudo /usr/bin/install -c bin/asquel /usr/bin/asquel
+
+remove:
+	sudo rm /usr/bin/asquel"
+    echo "$makefile" > Makefile
+    echo "Makefile generado con éxito!"
+    echo "  Ahora puedes compilar Asquel ejecutando:
+    make
+    make install"
+else
+    echo 'Saliendo sin cambios al equipo'
+fi
