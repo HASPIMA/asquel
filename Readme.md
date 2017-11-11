@@ -115,7 +115,7 @@ imprimir(134 / 687 * 12 / 467 + 35 - a * 24 / 24 * 1);
 
 * La expresiones pueden contener parentesis, sumas, restas, multiplicaciones y divisiones:
 ```
-a = 123 / (23 * 34) * 35456 - (131243 +2353655) / (75 - 2)
+a = 123 / (23 * 34) * 35456 - (131243 +2353655) / (75 - 2);
 ```
 
 * Para ejecutar alguno de estos programas de ejemplo, debes guardarlos en un archivo de texto plano con extensión .ASQ obligatoriamente o Asquel no lo cargará. También puedes usar el archivo de ejemplo que se incluye en la carpeta `ejemplos/`.
@@ -172,7 +172,7 @@ Nótese que en sistemas POSIX se diferencía a Python 2.x y 3.x a través del no
 Contribuir
 -------------------------
 Me sentiré muy feliz si encuentras a Asquel útil para tus proyectos personales, educativos, experimentales o simplemente por curiosidad, ya que se puede rescatar mucho de él, como el evaluador de expresiones, el procesador de simbolos, el evaluador, etc.
-Si deseas contribuir con código que dotaría a Asquel de nuevas características puedes hacerlo libremente creando un pull request, o sometiendo tus cambios directamente a revisión a través de mis vías de contacto disponibles en [mi sitio de github](https://soyzatarain.github.com/) o aquí más abajo.
+Si deseas contribuir con código que dotaría a Asquel de nuevas características puedes hacerlo libremente creando un pull request, o sometiendo tus cambios directamente a revisión a través de mis vías de contacto disponibles en [mi sitio de github](https://soyzatarain.github.io/) o aquí más abajo.
 Te invito a que hagas un fork de Asquel y lo mejores según tus necesidades, si sientes que tienes una mejor idea y por tanto tu desarrollo debe apartarse de la línea original, tienes mi bendición y licencia para hacerlo. No estas obligado a avisarme, pero si pudieras, me encantaría saber en qué te ayudó Asquel.
 
 Soporte
